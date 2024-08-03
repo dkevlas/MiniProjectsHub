@@ -1,0 +1,135 @@
+#header {
+  display: flex;
+  gap: 20px;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* NAV BAR */
+.nav {
+  display: flex;
+  background-color: transparent;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.nav .logo {
+  width: 75px;
+  aspect-ratio: 16/9;
+}
+
+.nav #logo {
+  min-width: 100%;
+  height: 100%;
+  object-position: center;
+  display: block;
+  border-radius: 20px;
+}
+
+.nav ul {
+  background-color: inherit;
+  display: flex;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+  gap: clamp(3rem, 0.857rem + 5.714vw, 6rem);
+  transition: color 0.5s;
+}
+.nav ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.nav ul li:hover {
+  text-decoration: underline;
+}
+
+.nav span {
+  cursor: pointer;
+}
+
+/* HERO */
+#header #hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#header #hero h1 {
+  font-size: clamp(2.5rem, -0.5rem + 6.25vw, 3.5rem);
+}
+#header #hero p {
+  font-size: clamp(1rem, -0.5rem + 3.125vw, 1.5rem);
+}
+
+#header #hero .img-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#header #hero .img-hero {
+  width: clamp(15rem, -60rem + 156.25vw, 40rem);
+  aspect-ratio: 16/9;
+  margin: auto;
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+}
+
+/*  PRINCIPAL */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.25s ease-in;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  #header .vertical {
+    width: 200px;
+    height: 600px;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+  }
+  /*
+  #header .vertical{
+      right: -180px;
+  }
+      */
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #header .nav {
+    padding: 10px 50px;
+  }
+  #header .nav span {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #header .nav span {
+    display: none;
+  }
+}
