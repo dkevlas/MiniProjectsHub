@@ -1,47 +1,12 @@
+@import "mixins/mixins";
 @import "header/header.scss";
 @import "header/nav/nav.scss";
 @import "header/hero/hero.scss";
+
 /*  PRINCIPAL */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     transition: .25s ease-in;
-}
-
-body{
-    background-color: #333;
-    color: #fff;
-}
-
-@media screen and (max-width: 767px) {
-    #header .nav ul li{
-        
-    }
-    #header .vertical{
-        width: 200px;
-        height: 600px;
-        background-color: white;
-        opacity: .5;
-        position: absolute;
-        right: 0;
-    }
-    /*
-    #header .vertical{
-        right: -180px;
-    }
-        */
-}
-@media screen and (min-width: 768px) and (max-width: 1024px){
-    #header .nav{
-        padding: 10px 50px;
-    }
-    #header .nav span{
-        display: none;
-    }
-}
-@media screen and (min-width: 1025px) {
-    #header .nav span{
-        display: none;
-    }
 }

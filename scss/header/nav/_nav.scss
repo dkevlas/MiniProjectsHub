@@ -1,4 +1,4 @@
-/* NAV BAR */
+/* INICIO NAV BAR */
 .nav{
     display: flex;
     background-color: transparent;
@@ -10,36 +10,46 @@
     top: 0;
     right: 0;
     left: 0;
-}
-
-.nav .logo{
-    width: 75px;
-    aspect-ratio: 16/9;
-}
-
-.nav #logo{
-    min-width: 100%;
-    height: 100%;
-    object-position: center;
-    display: block;
-    border-radius: 20px;
-}
-.nav ul{
-    background-color: inherit;
-    display: flex;
-    font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
-    gap: clamp(3rem, 0.857rem + 5.714vw, 6rem);
-    transition: color .5s;
-    li{
-        list-style: none;
+    .logo{
+        width: 75px;
+        aspect-ratio: 16/9;
+        #logo{
+            min-width: 100%;
+            height: 100%;
+            object-position: center;
+            display: block;
+            border-radius: 20px;
+        }
+    }
+    .ul{
+        display: none;
+    }   
+    span{
         cursor: pointer;
     }
-    li:hover{
-        text-decoration: underline;
-    }
-}   
-
-.nav span{
-    cursor: pointer;
 }
 
+
+@include mquerie(768px){
+    .nav .ul{
+        display: flex;
+        font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+        gap: clamp(3rem, 0.857rem + 5.714vw, 6rem);
+        transition: color .5s;
+        li{
+            list-style: none;
+            cursor: pointer;
+        }
+        li:hover{
+            text-decoration: underline;
+        }
+    }
+    .nav span{
+        display: none;
+    }
+}
+@include mquerie(1024px){
+    //EN ESPERA
+}
+
+/* FIN NAV BAR */
