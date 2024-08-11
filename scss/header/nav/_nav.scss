@@ -10,6 +10,7 @@
     top: 0;
     right: 0;
     left: 0;
+    background-color: red;
     .logo{
         width: 75px;
         aspect-ratio: 16/9;
@@ -20,12 +21,34 @@
             display: block;
             border-radius: 20px;
         }
-    }
+
+    }/*
     .ul{
         display: none;
-    }   
+    }*/
+    
+    .ul-script{
+        background-color: gray;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        width: 300px;
+        height: 500px;
+        top: 0;
+        right: 0;
+        li{
+            cursor: pointer;
+            font-size: 2rem;
+        }
+        li:hover{
+            text-decoration: underline;
+        }
+    }
     span{
         cursor: pointer;
+        z-index: 2;
     }
 }
 
@@ -47,9 +70,9 @@
     .nav span{
         display: none;
     }
-}
-@include mquerie(1024px){
-    //EN ESPERA
+    .nav .ul-script{
+        display: none;
+    }
 }
 
 /* FIN NAV BAR */
