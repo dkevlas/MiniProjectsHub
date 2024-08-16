@@ -1,0 +1,108 @@
+/* INICIO NAV BAR */
+.nav{
+    display: flex;
+    background-color: transparent;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    .logo{
+        width: 75px;
+        aspect-ratio: 16/9;
+        #logo{
+            min-width: 100%;
+            height: 100%;
+            object-position: center;
+            display: block;
+            border-radius: 20px;
+        }
+    }
+    .ul{
+        display: none;
+    }
+    .ul-script{
+        background-color: transparent;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        width: 250px;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding-top: 20%;
+        gap: 20px;
+        li{
+            cursor: pointer;
+            font-size: 2rem;
+        }
+        li:hover{
+            text-decoration: underline;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    span{
+        cursor: pointer;
+        z-index: 2;
+        user-select: none;
+    }
+    .ul-script ~ span{
+        color: white;
+    }
+    .ul-script ~ a{
+        color: black;
+    }
+    
+    .ul-blur-script{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: -1;
+        opacity: .9;
+        filter: blur(1px);
+    }
+}
+
+
+@include mquerie(768px){
+    .nav .ul{
+        display: flex;
+        font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+        gap: clamp(3rem, 0.857rem + 5.714vw, 6rem);
+        transition: color .5s;
+        li{
+            list-style: none;
+            cursor: pointer;
+            color: black;
+        }
+        li:hover{
+            text-decoration: underline;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .ul-blur-script{
+            display: none;
+        }
+    }
+    .nav span{
+        display: none;
+    }
+    .nav .ul-script{
+        display: none;
+    }
+}
+
+/* FIN NAV BAR */
