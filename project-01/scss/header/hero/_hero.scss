@@ -5,10 +5,10 @@
     gap: 20px;
     width: 90%;
     h1{
-        font-size: clamp(2.2rem, 6vw, 2.8rem);
+        font-size: clamp(1.8rem, 5vh, 2.2rem);
     }
     p{
-        font-size: clamp(1rem, -0.5rem + 3.125vw, 1.5rem);
+        font-size: clamp(1rem, -0.5rem + 2.5vw, 1.2rem);
     }
 }
 
@@ -21,6 +21,8 @@
     background-size: cover;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     opacity: .2;
     z-index: -1;
     filter: blur(2px);
@@ -35,7 +37,7 @@
     border-radius: 50px;
 }
 
-@include mquerie(768px){
+@include mquerie(640px){
     #header #hero{
         width: 70%;
     }
